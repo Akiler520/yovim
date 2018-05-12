@@ -1,0 +1,16 @@
+#set upload max file size
+#php_value upload_max_filesize '10M'
+#php_value post_max_size '10M'
+
+#set memory limit
+#php_value memory_limit '10M'
+
+
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} -s [OR]
+#RewriteCond %{REQUEST_FILENAME} -l [OR]
+#RewriteCond %{REQUEST_FILENAME} -d
+#RewriteRule ^.*$ - [NC,L]
+#RewriteRule ^.*$ index.php [NC,L]
+RewriteEngine on
+RewriteRule !\.(js|ico|gif|jpg|png|css|log|txt|html|xml)$ index.php
